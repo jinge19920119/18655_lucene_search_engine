@@ -1,0 +1,10 @@
+DROP DATABASE publication;
+CREATE DATABASE IF NOT EXISTS publication;
+use publication;
+
+CREATE TABLE IF NOT EXISTS article(
+    `id` int not NULL AUTO_INCREMENT PRIMARY KEY, 
+     g GEOMETRY NOT NULL,
+    `title` VARCHAR(255),
+     SPATIAL INDEX(g)
+) ENGINE=MyISAM;
